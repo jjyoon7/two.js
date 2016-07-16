@@ -7,22 +7,18 @@
   <script src="./path-to-two/two.js"></script>
 </head>
 <body>
-<div id="drawingarea">
+  <div id="drawingarea"></div>
   <script type="text/javascript">
-    var ob = document.getElementById('drawingarea');
+    var object = document.getElementById('drawingarea');
     var params = { width: 600, height: 400 };
     var two = new Two(params);
-    two.appendTo(ob);
+    two.appendTo(object);
     var circle = two.makeCircle(200, 100, 80);
     circle.fill = '#fefe'
     circle.stroke = 'blue';
     circle.linewidth = 5;
     two.update();
   </script>
-</div>
-
-
-
 </body>
 </html>
 
