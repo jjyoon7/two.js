@@ -1,0 +1,29 @@
+<div class="col-xs-12 col-sm-6">
+    <div class="input-group">
+      <span class="input-group-addon">http://swapi.co/api/</span>
+      <input id="interactive" type="text" class="form-control" placeholder="people/1/">
+      <span class="input-group-btn">
+        <button onclick="interactive_call();return false;" class="btn btn-primary">
+          request
+        </button>
+          <button onclick="interactive_call();return false;" class="btn btn-wookiee">
+          wookiee
+        </button>
+      </span>
+    </div>
+
+    <small>
+     Need a hint? try
+      <a href="#" onclick="update('people/1/');return false;"><i>people/1/</i></a>
+     or <a href="#" onclick="update('planets/3/');return false;"><i>planets/3/</i></a>
+     or <a href="#" onclick="update('starships/9/');return false;"><i>starships/9/</i></a>
+    </small>
+  </div>
+
+  <div class="col-xs-12 col-sm-6">
+    <div class="well">
+      <pre id="interactive_output" class="pre-scrollable">
+      <%= @data_from_api %>
+    </pre>
+  </div>
+</div>
