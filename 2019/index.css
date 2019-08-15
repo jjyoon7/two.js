@@ -1,0 +1,22 @@
+html {
+    background-color: white;
+}
+
+.zdog-canvas2{
+    position: relative;
+    left: 20px;
+    background-color: white;
+    border-block-start-color: black;
+    border-style: solid;
+    border-width: 10px;
+}
+
+.zdog-canvas3{
+    position: absolute;
+    top:20px;
+    left: 800px;
+    background-color: white;
+    border-block-start-color: black;
+    border-style: solid;
+    border-width: 10px;
+}
