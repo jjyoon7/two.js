@@ -1,0 +1,125 @@
+@import url(https://fonts.googleapis.com/css?family=Creepster|Inconsolata|Roboto+Mono);
+body {
+  background-color: #f9f9f9;
+  margin: 0;
+}
+
+.container {
+  position: fixed;
+  width: 100%;
+}
+
+.card-plane {
+  position: absolute;
+  width: 182.85714px;
+  height: 320px;
+  margin: 50px calc(50vw -  91.42857px);
+}
+.card-plane .card-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.card-plane .card-face.front {
+  background-color: black;
+  color: white;
+  font-family: "Inconsolata";
+}
+.card-plane .card-face.front .title {
+  font-size: 21px;
+  padding: 22px 22px;
+}
+.card-plane .card-face.front .title hr {
+  margin: 7px 0;
+}
+.card-plane .card-face.front .scroll {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  color: #103FFB;
+  bottom: -30px;
+  font-size: 12px;
+}
+.card-plane .card-face.back {
+  /* reversed for the back of the card */
+  width: 320px;
+  height: 182.85714px;
+  -webkit-transform: rotateZ(90deg) rotateX(180deg) translate3d(68.57143px, -68.57143px, 0px);
+          transform: rotateZ(90deg) rotateX(180deg) translate3d(68.57143px, -68.57143px, 0px);
+}
+
+.back-text {
+  position: fixed;
+  left: calc(50vw -  182.85714px + 40px);
+  top: 90px;
+  font-family: "Roboto Mono";
+  color: white;
+  font-size: 15px;
+  width: 300px;
+}
+.back-text a {
+  color: white;
+}
+.back-text a:hover {
+  background-color: white;
+  color: #FD556F;
+  text-decoration: none;
+}
+
+.arrow {
+  font-size: 24px;
+  font-family: "Inconsolata";
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  top: 320px;
+}
+
+#links {
+  font-family: "Inconsolata";
+  font-size: 9vmin;
+  padding: 4vmin;
+  font-weight: 300;
+  width: 100vmin;
+  margin: auto;
+  position: relative;
+}
+#links .line {
+  line-height: 7.5vmin;
+  margin-bottom: 2.5vmin;
+}
+#links .line:nth-of-type(5n+1) {
+  color: #EDEFF0;
+}
+#links .line:nth-of-type(5n+2) {
+  color: #EDEFF0;
+}
+#links .line:nth-of-type(5n+3) {
+  color: #EDEFF0;
+}
+#links .line:nth-of-type(5n+4) {
+  color: #EDEFF0;
+}
+#links .line:nth-of-type(5n+5) {
+  color: #EDEFF0;
+}
+#links a {
+  color: black;
+  border-bottom: 2px dotted black;
+  margin-bottom: -2px;
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+  border-color: inherit;
+}
+#links a:hover {
+  border-bottom-style: solid;
+}
+#links .slash {
+  font-weight: 200;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}

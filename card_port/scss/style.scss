@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css?family=Creepster|Inconsolata|Roboto+Mono);
+
+body {
+  background-color: #f9f9f9;
+  margin: 0;  
+}
+
+.container {
+  position: fixed;
+  width: 100%;
+}
+
+$card-height: 320;
+$card-width: $card-height * (2/3.5);
+$offset: ($card-height - $card-width) / 2;
+
+.card-plane {
+  position: absolute;
+  width: $card-width + px;
+  height: $card-height + px;
+  margin: 50px calc(50vw -  #{$card-width / 2 + px});
+  .card-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    
+    &.front {     
+      background-color: black;
+      color: white;
+     font-family: 'Inconsolata', ;    
+      .title {
+        font-size: 21px;
+        padding: 22px 22px;
+        hr {
+          margin: 7px 0;
+        }
+      }
+      .scroll {
+        position: absolute;
+        text-align: center;
+        width: 100%;            
+        color: #103FFB;
+        bottom: -30px;
+        font-size: 12px;       
+      }      
+    }
+    
+    &.back {
+      /* reversed for the back of the card */
+      width: $card-height + px;
+      height: $card-width + px;
+      transform: rotateZ(90deg) rotateX(180deg) translate3d($offset+px, -$offset+px, 0px); 
+    }
+  }  
+}
+
+.back-text {
+  position: fixed;
+  left: calc(50vw -  #{$card-width + px} + 40px);
+  top: 90px;
+  font-family: 'Roboto Mono', ;
+  color: white;
+  font-size: 15px;
+  width: 300px;
+  a {
+    color: white;
+    &:hover {
+      background-color: white;
+      color: #FD556F;
+      text-decoration: none;
+    }
+  }
+}
+
+.arrow {
+  font-size: 24px;
+  font-family: 'Inconsolata', ;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  top: $card-height + px;
+} 
+
+#links {
+ font-family: 'Inconsolata', ;
+  font-size: 9vmin;
+  padding: 4vmin;
+  font-weight: 300;
+  width: 100vmin;
+  margin: auto;
+  position: relative;
+  
+  .line {
+    line-height: 7.5vmin;
+    margin-bottom: 2.5vmin;
+    &:nth-of-type(5n+1){
+      color: #EDEFF0;
+    }
+    &:nth-of-type(5n+2){
+      color: #EDEFF0;
+    }
+    &:nth-of-type(5n+3){
+      color: #EDEFF0;
+    }
+    &:nth-of-type(5n+4){
+      color: #EDEFF0;
+    }
+    &:nth-of-type(5n+5){
+      color: #EDEFF0;
+    }  
+  }
+
+  a {
+    color: black;
+    border-bottom: 2px dotted black;
+    margin-bottom: -2px;
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+    border-color: inherit;  
+  }
+
+  a:hover {
+    border-bottom-style: solid;
+  }
+
+  .slash {
+    font-weight: 200;
+  }  
+}
+
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
