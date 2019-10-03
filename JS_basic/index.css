@@ -1,0 +1,15 @@
+body{
+    background-color: gray;
+}
+
+h1 {
+    color: yellow;
+}
+
+.form, .greetings{
+    display: none;
+}
+
+.showing {
+    display: block;
+}
