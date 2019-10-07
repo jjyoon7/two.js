@@ -5,6 +5,12 @@ const toDoList = document.querySelector(".js-toDoList")
 const TODOS_LS = "toDos"
 const toDos = [];
 
+function deleteToDos(event) {
+    const btn = event.target;
+    const li = btn.parentNode;
+    toDoList.removeChild(li);
+}
+
 function saveToDos() {
     localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
 }
@@ -13,6 +19,7 @@ function paintToDo(text) {
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
     delBtn.value = "X";
+    delBtn.addEventListener("click", deleteToDos)
     const span = document.createElement("span");
     const newId = toDos.length + 1;
     span.innerText = text;
