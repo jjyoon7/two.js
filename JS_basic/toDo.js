@@ -3,12 +3,17 @@ const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.querySelector(".js-toDoList")
 
 const TODOS_LS = "toDos"
-const toDos = [];
+let toDos = [];
 
 function deleteToDos(event) {
     const btn = event.target;
     const li = btn.parentNode;
     toDoList.removeChild(li);
+    const cleanToDos = toDos.filter(function(toDo) {
+        return toDo.id !== parseInt(li.id);
+    })
+    toDos = cleanToDos;
+    saveToDos();
 }
 
 function saveToDos() {
