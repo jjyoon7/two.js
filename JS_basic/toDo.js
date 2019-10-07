@@ -20,7 +20,6 @@ function paintToDo(text) {
     li.appendChild(delBtn);
     li.id = newId;
     toDoList.appendChild(li);
-    toDoInput.value = "";
     const toDoObj = {
         text: text,
         id: newId
@@ -33,12 +32,17 @@ function handleSubmit(event) {
     event.preventDefault();
     const currentValue = toDoInput.value;
     paintToDo(currentValue);
+    toDoInput.value = "";
 }
 
 function loadTodos() {
     const loadedToDos = localStorage.getItem(TODOS_LS);
-    if(loadedToDos !== null){
-
+    if(loadedToDos !== null) {
+        // console.log(loadedToDos)
+        const parsedToDos = JSON.parse(loadedToDos);
+        parsedToDos.forEach(function(toDo) {
+            paintToDo(toDo.text);
+        });
     }
 }
 
