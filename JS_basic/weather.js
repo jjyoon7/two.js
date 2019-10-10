@@ -1,4 +1,5 @@
 const API_KEY = "9bc461fd0a5207c2d4962a814060dfad";
+const weather = document.querySelector(".js-weather");
 const COORDS = 'coords';
 
 function geoWeather(lat, lng) {
@@ -6,6 +7,9 @@ function geoWeather(lat, lng) {
         return response.json();
     }).then(function(json) {
         console.log(json);
+        const temp = json.main.temp;
+        const place = json.name;
+        weather.innerText = `is ${temp} at ${place}`
     })
 }
 
