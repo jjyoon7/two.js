@@ -17,6 +17,7 @@ function handleGeoSucess(position) {
         longitude
     }
     saveCoords(coordsObj);
+    geoWeather(latitude, longitude);
 }
 
 function handleGeoError() {
